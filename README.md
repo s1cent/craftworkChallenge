@@ -1,5 +1,8 @@
 # craftworkChallenge
- 
+- Ausführen des Bash skriptes
+  - im Bashskript gibt es die Variable INPUT, entweder man verändert dort den Folder + Namen oder man nennt das File "challenge.csv" und speichert es in einen neuen Ordner genannt "challenge"
+
+
 - Die Daten beinhalten Ausschnitte in unterschiedlichen Sprachen, ev. auch in ungültigem CSV Format. Welche Probleme können dabei auftreten, wie könnte diesen vorgebeugt werden?
   - Bei unterschiedlichen Sprachen kann es dazu kommen, dass manche Symbole (z.B Russisch) nicht richtig angezeigt werden können. Hier im challenge.csv sind auch arabische Zeichen vorhanden, dadurch man in diesen Länder alles von rechts nach links liest ist hier auch der Index des Arrays falsch. Am besten wäre es, dass das File nur eine Sprache beinhaltet damit man nicht viele Randcases beachten muss. 
   - Bevor man mit dem File überhaupt beginnt zu arbeiten, sollte man immer checken ob das CSV Format zu den vorrausetzungen passt. Wenn nicht, sollte man zuerst das File reinigen, damit man später nicht auf Fehler stößt.
