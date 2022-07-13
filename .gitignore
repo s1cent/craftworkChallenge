@@ -94,3 +94,4 @@ lib*.pc
 /Debug/
 /Release/
 /tmp_install/
+/postgres-data/
