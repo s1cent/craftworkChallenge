@@ -1,0 +1,27 @@
+version: '3'
+services:
+  web:
+    build: .
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - "/usercode/:/code"
+    environment:
+      - DB_SERVER=db
+  db:
+    image: postgres
+    container_name: db
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/datas
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  pgadmin:
+    image: chorss/docker-pgadmin4
+    ports:
+      - 5050:5050
